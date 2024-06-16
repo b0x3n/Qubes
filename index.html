@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<meta charset="utf-8">
+		
+		<link rel="Stylesheet" type="text/css" href="styles/common.css">
+		<link rel="Stylesheet" type="text/css" href="styles/qube.css">
+		
+		<title>
+			Qubes
+		</title>		
+		
+		<meta content="True" name="HandheldFriendly">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="viewport" content="width=device-width">
+		
+		<script src="plugins/jquery-1.11.0.js"></script>	
+		<script src="plugins/jquery-colour.js"></script>
+		
+		<script src="app/QubeTiles.js"></script>
+		
+		<script src="app/QubeModel.js"></script>
+		<script src="app/QubeViews.js"></script>
+		<script src="app/QubeController.js"></script>
+		
+	</head>
+	
+	<body>
+	
+		<div id="outer">
+			<div id="inner">
+				<div id="header" class="base-el">
+					<div id="header-info">
+						<div id="info-score" class="info-el">
+							Score
+							<div id="info-score-data" class="info-data">
+							</div>
+						</div>
+						<div id="info-lives" class="info-el">
+							LIVES
+							<div id="info-lives-data" class="info-data">
+							</div>
+						</div>
+						<div id="info-level" class="info-el">
+							LEVEL
+							<div id="info-level-data" class="info-data">
+							</div>
+						</div>
+						<div id="info-next" class="info-el">
+							NEXT
+							<div id="info-tile" class="info-data">
+								<div id="info-tile-0-0" class="info-tile-blank">&nbsp;</div>
+								<div id="info-tile-0-1" class="info-tile-blank">&nbsp;</div>
+								<div id="info-tile-0-2" class="info-tile-blank">&nbsp;</div>
+								
+								<div id="info-tile-1-0" class="info-tile-blank">&nbsp;</div>
+								<div id="info-tile-1-1" class="info-tile-blank">&nbsp;</div>
+								<div id="info-tile-1-2" class="info-tile-blank">&nbsp;</div>
+								
+								<div id="info-tile-2-0" class="info-tile-blank">&nbsp;</div>
+								<div id="info-tile-2-1" class="info-tile-blank">&nbsp;</div>
+								<div id="info-tile-2-2" class="info-tile-blank">&nbsp;</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="stage" class="base-el">
+					<div id="qube" class="qube">
+					</div>
+					<div id="qube-overlay" class="qube-overlay">
+						&nbsp;
+					</div>
+				</div>
+				
+				<div id="footer" class="base-el">
+					<div id="footer-controls">
+						<div id="control-left" class="control-el">
+							<img title="Move block left or rotate grid anti-clockwise" id="control-left-img" src="images/icons/ArrowLeft.png" class="icon-el" />
+						</div><div id="control-pad-0" class="control-pad">&nbsp;</div>
+						<div id="control-up" class="control-el">
+							<img title="Move block up" id="control-up-img" src="images/icons/ArrowUp.png" class="icon-el" />
+						</div><div id="control-pad-1" class="control-pad">&nbsp;</div>
+						<div id="control-down" class="control-el">
+							<img title="Move block down or land block" id="control-down-img" src="images/icons/ArrowDown.png" class="icon-el" />
+						</div><div id="control-pad-2" class="control-pad">&nbsp;</div>
+						<div id="control-right" class="control-el">
+							<img title="Move block right or rotate grid clockwise" id="control-right-img" src="images/icons/ArrowRight.png" class="icon-el" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<script>
+			$(document).ready(function() {
+				var	q = new QubeController("stage", "qube");
+				
+			//	q.startQube();
+			});
+		</script>
+	</body>
+
+</html>
+
